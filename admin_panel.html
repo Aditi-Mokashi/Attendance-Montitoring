@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="admin_panel_css.css">
+    <title>Admin Panel</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="logout">
+            <button>Logout</button>
+        </div>
+    </nav>
+
+
+
+    <div class="details">
+        <div class="search-bar">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date">
+            <label for="lab-name">Lab Name:</label>
+            <select id="lab-name" name="lab-name">
+                <option value="lab-1">Lab 1</option>
+                <option value="lab-2">Lab 2</option>
+                <option value="lab-3">Lab 3</option>
+            </select>
+            <button type="submit">Search</button>
+        </div>
+
+
+        <div class="listOfStudent">
+            <table class="attendance-table">
+                <thead>
+                    <tr>
+                        <th>Sr No.</th>
+                        <th>Practical</th>
+                        <th>Time</th>
+                        <th>Attendance</th>
+                        <th>Faculty</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>DSBDA</td>
+                        <td>10:00 - 12:00</td>
+                        <td>15</td>
+                        <td>Kirti Satpude</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>WT</td>
+                        <td>12:45 - 2:45</td>
+                        <td>15</td>
+                        <td>Asma Shaikh</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

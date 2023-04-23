@@ -1,0 +1,174 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Lato, sans-serif;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    height: 70px;
+    padding: 0 5%;
+    font-size: 1.3rem;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.logout button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+}
+
+.logout button:hover {
+    text-decoration: underline;
+}
+
+
+
+
+.details {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+
+
+.listOfStudent {
+    width: 40%;
+    height: fit-content;
+    border: 2px solid rgb(151, 151, 151);
+    padding: 5%;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+}
+
+
+.attendance-table {
+    border-collapse: collapse;
+}
+
+.attendance-table th,
+.attendance-table td {
+    width: 2%;
+    padding: 2%;
+    text-align: center;
+}
+
+.attendance-table th {
+    font-weight: bold;
+    padding-bottom: 4%;
+    border-bottom: 1px solid #ccc;
+}
+
+.attendance-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.attendance-table tbody td {
+    border-top: 1px solid #ccc;
+}
+
+.attendance-table tbody td:first-child {
+    border-left: none;
+}
+
+.attendance-table tbody td:last-child {
+    border-right: none;
+}
+
+
+
+
+
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    background-color: #F2F2F2;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar label {
+    margin-right: 10px;
+}
+
+.search-bar input,
+.search-bar select,
+.search-bar button {
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    padding: 10px;
+    margin-right: 8%;
+    border-radius: 5px;
+    outline: none;
+}
+
+.search-bar input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.search-bar input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+.search-bar input:focus,
+.search-bar select:focus,
+.search-bar button:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar button {
+    background-color: #333;
+    /*#4CAF50 */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #3E8E41;
+    /*#3E8E41 */
+}
+
+@media only screen and (max-width: 768px) {
+    .search-bar {
+        flex-wrap: wrap;
+    }
+
+    .search-bar label {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .search-bar input,
+    .search-bar select,
+    .search-bar button {
+        flex-grow: 1;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .search-bar input[type="date"] {
+        width: 100%;
+    }
+}
