@@ -21,8 +21,12 @@ body {
 }
 
 .login-box,
+<<<<<<< HEAD
 .signup-box,
 .success-box {
+=======
+.signup-box {
+>>>>>>> 89d4e55ed0b076d1abd25ab948ed5884326b0dab
   display: none;
   width: 400px;
   height: 400px;
@@ -42,8 +46,12 @@ body {
 
 
 h1,
+<<<<<<< HEAD
 h2,
 h4 {
+=======
+h2 {
+>>>>>>> 89d4e55ed0b076d1abd25ab948ed5884326b0dab
   text-align: center;
   margin-bottom: 20px;
 }
@@ -98,8 +106,12 @@ input[type="submit"]:hover {
 }
 
 #login-btn,
+<<<<<<< HEAD
 #signup-btn,
 #success-btn {
+=======
+#signup-btn {
+>>>>>>> 89d4e55ed0b076d1abd25ab948ed5884326b0dab
   background-color: #4CAF50;
   color: white;
   padding: 10px 20px;
@@ -110,8 +122,12 @@ input[type="submit"]:hover {
 }
 
 #login-btn:hover,
+<<<<<<< HEAD
 #signup-btn:hover,
 #success-btn:hover {
+=======
+#signup-btn:hover {
+>>>>>>> 89d4e55ed0b076d1abd25ab948ed5884326b0dab
   background-color: #3e8e41;
 }
 
