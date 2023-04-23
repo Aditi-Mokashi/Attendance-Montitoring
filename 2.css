@@ -16,6 +16,10 @@ body {
   align-items: center;
 }
 
+.mainPageForms {
+  margin-top: 15%;
+}
+
 .login-box,
 .signup-box {
   display: none;
