@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Attendance Monitoring</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+  <!-- <link rel="stylesheet" type="text/css" href="/css"> -->
+  <style>
+    body {
+  height: 100vh;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: Lato, sans-serif;
+  /* text-align: center; */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainPageForms {
+  margin-top: 15%;
+}
+
+.login-box,
+.signup-box {
+  display: none;
+  width: 400px;
+  height: 400px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  margin: 0 20px;
+  align-self: center;
+}
+
+
+
+.options {
+  margin-bottom: 10%;
+}
+
+
+h1,
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 18px;
+  margin-bottom: 5px;
+  margin-right: 5%;
+  width: fit-content;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 60%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+.signup-link {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.signup-link a {
+  color: #666;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+#login-btn,
+#signup-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+#login-btn:hover,
+#signup-btn:hover {
+  background-color: #3e8e41;
+}
+
+.show {
+  display: block;
+}
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="options">
+      <button id="login-btn">Teacher</button>
+      <button id="signup-btn">Student</button>
+    </div>
+
+    <div class="forms">
+      <div class="login-box" id="login-box">
+        <h1>Teacher</h1>
+
+        <div class="mainPageForms">
+          <form>
+            <div class="usernameDiv">
+              <label for="username">Username</label>
+              <input type="text" id="username" name="username" placeholder="Enter Username" required>
+            </div>
+
+            <div class="passwordDiv">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" placeholder="Enter Password" required>
+            </div>
+            <input type="submit" value="Login">
+          </form>
+        </div>
+
+      </div>
+      <div class="signup-box" id="signup-box">
+        <h1>Student</h1>
+
+
+        <div class="mainPageForms">
+          <form id="signup-form">
+            <div class="rollNumDiv">
+              <label for="r">Roll Number</label>
+              <input type="text" id="new-roll-number" name="r" placeholder="Enter Roll Number" required>
+            </div>
+            <br>
+            <input type="submit" value="SUBMIT">
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const loginBtn = document.getElementById("login-btn");
+const signupBtn = document.getElementById("signup-btn");
+const loginBox = document.getElementById("login-box");
+const signupBox = document.getElementById("signup-box");
+
+signupBox.classList.add("show");
+
+
+loginBtn.addEventListener("click", function () {
+  loginBox.classList.add("show");
+  signupBox.classList.remove("show");
+  console.log(ip);
+});
+
+signupBtn.addEventListener("click", function () {
+  signupBox.classList.add("show");
+  loginBox.classList.remove("show");
+
+});
+
+function getIP(json) {
+          var ip =  json.ip;
+        }
+        
+        console.log(ip);
+  </script>
+</body>
+
+</html>
