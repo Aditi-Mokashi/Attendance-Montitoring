@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background:linear-gradient(to right, #4467c9, #0022ff, #6c47ff);
+}
+  
+div.bucket{
+    background-color: rgb(255, 255, 255);
+    text-align:left;
+    border-radius: 10px;
+    font-size: 18px;
+    box-shadow: 2px 2px 15px rgb(255, 255, 255);
+    width: 400px;
+    margin: 100px auto 0px auto;
+}
+h2{
+    text-align: center;
+    padding: 20px;
+    font-family:sans-serif;
+}
+
+button#submit{
+    width: 100px;
+    padding: 7px;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 600;
+    border-radius: 2px;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+}
