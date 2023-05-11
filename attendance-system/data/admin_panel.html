@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet">
+    <style>
+        * {
+    padding: 0;
+    margin: 0;
+    font-family: Lato, sans-serif;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    height: 70px;
+    padding: 0 5%;
+    font-size: 1.3rem;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.logout button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+}
+
+.logout button:hover {
+    text-decoration: underline;
+}
+
+
+
+
+.details {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+
+
+.listOfStudent {
+    width: 40%;
+    height: fit-content;
+    border: 2px solid rgb(151, 151, 151);
+    padding: 5%;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+}
+
+
+.attendance-table {
+    border-collapse: collapse;
+}
+
+.attendance-table th,
+.attendance-table td {
+    width: 2%;
+    padding: 2%;
+    text-align: center;
+}
+
+.attendance-table th {
+    font-weight: bold;
+    padding-bottom: 4%;
+    border-bottom: 1px solid #ccc;
+}
+
+.attendance-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.attendance-table tbody td {
+    border-top: 1px solid #ccc;
+}
+
+.attendance-table tbody td:first-child {
+    border-left: none;
+}
+
+.attendance-table tbody td:last-child {
+    border-right: none;
+}
+
+
+
+
+
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    background-color: #F2F2F2;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar label {
+    margin-right: 10px;
+}
+
+.search-bar input,
+.search-bar select,
+.search-bar button {
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    padding: 10px;
+    margin-right: 8%;
+    border-radius: 5px;
+    outline: none;
+}
+
+.search-bar input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.search-bar input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+.search-bar input:focus,
+.search-bar select:focus,
+.search-bar button:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar button {
+    background-color: #333;
+    /*#4CAF50 */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #3E8E41;
+    /*#3E8E41 */
+}
+
+@media only screen and (max-width: 768px) {
+    .search-bar {
+        flex-wrap: wrap;
+    }
+
+    .search-bar label {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .search-bar input,
+    .search-bar select,
+    .search-bar button {
+        flex-grow: 1;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .search-bar input[type="date"] {
+        width: 100%;
+    }
+}
+    </style>
+    <title>Admin Panel</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="logout">
+            <button>Logout</button>
+        </div>
+    </nav>
+
+
+
+    <div class="details">
+        <div class="search-bar">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date">
+            <label for="lab-name">Lab Name:</label>
+            <select id="lab-name" name="lab-name">
+                <option value="lab-1">Lab 1</option>
+                <option value="lab-2">Lab 2</option>
+                <option value="lab-3">Lab 3</option>
+            </select>
+            <button type="submit">Search</button>
+        </div>
+
+
+        <div class="listOfStudent">
+            <table class="attendance-table">
+                <thead>
+                    <tr>
+                        <th>Sr No.</th>
+                        <th>Practical</th>
+                        <th>Time</th>
+                        <th>Attendance</th>
+                        <th>Faculty</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>DSBDA</td>
+                        <td>10:00 - 12:00</td>
+                        <td>15</td>
+                        <td>Kirti Satpude</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>WT</td>
+                        <td>12:45 - 2:45</td>
+                        <td>15</td>
+                        <td>Asma Shaikh</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

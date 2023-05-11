@@ -80,7 +80,7 @@ input[type="password"] {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
 }
 
-input[type="submit"] {
+input[type="button"] {
   background-color: #4CAF50;
   color: white;
   padding: 10px;
@@ -89,7 +89,7 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-input[type="submit"]:hover {
+input[type="button"]:hover {
   background-color: #3e8e41;
 }
 
@@ -152,7 +152,7 @@ input[type="submit"]:hover {
               <label for="password">Password</label>
               <input type="password" id="password" name="password" placeholder="Enter Password" required>
             </div>
-            <input type="submit" value="Login">
+            <input type="submit" value="Login" onclick="teacherLogin()">
           </form>
         </div>
 
@@ -162,13 +162,13 @@ input[type="submit"]:hover {
 
 
         <div class="mainPageForms">
-          <form id="signup-form">
+          <form id="signup-form" method="get">
             <div class="rollNumDiv">
               <label for="r">Roll Number</label>
-              <input type="text" id="new-roll-number" name="r" placeholder="Enter Roll Number" required>
+              <input type="text" id="nrn" name="r" placeholder="Enter Roll Number" required>
             </div>
             <br>
-            <input type="submit" value="SUBMIT">
+            <input type="button" value="SUBMIT" onclick="goTo()">
           </form>
         </div>
 
@@ -185,6 +185,10 @@ const signupBox = document.getElementById("signup-box");
 
 signupBox.classList.add("show");
 
+function goTo()
+{
+  window.location.replace("http://192.168.4.1/ty?r="+btoa(document.getElementById("nrn").value));
+}
 
 loginBtn.addEventListener("click", function () {
   loginBox.classList.add("show");
@@ -198,11 +202,11 @@ signupBtn.addEventListener("click", function () {
 
 });
 
-function getIP(json) {
-          var ip =  json.ip;
-        }
-        
-        console.log(ip);
+function teacherLogin()
+{
+  window.location.replace("http://192.168.4.1/admin");
+}
+
   </script>
 </body>
 
