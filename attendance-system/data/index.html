@@ -11,121 +11,121 @@
   <!-- <link rel="stylesheet" type="text/css" href="/css"> -->
   <style>
     body {
-  height: 100vh;
-  background-color: #f2f2f2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-family: Lato, sans-serif;
-  /* text-align: center; */
-}
+      height: 100vh;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: Lato, sans-serif;
+      /* text-align: center; */
+    }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
-.mainPageForms {
-  margin-top: 15%;
-}
+    .mainPageForms {
+      margin-top: 15%;
+    }
 
-.login-box,
-.signup-box {
-  display: none;
-  width: 400px;
-  height: 400px;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-  margin: 0 20px;
-  align-self: center;
-}
-
-
-
-.options {
-  margin-bottom: 10%;
-}
+    .login-box,
+    .signup-box {
+      display: none;
+      width: 400px;
+      height: 400px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+      margin: 0 20px;
+      align-self: center;
+    }
 
 
-h1,
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
 
-form {
-  display: flex;
-  flex-direction: column;
-}
+    .options {
+      margin-bottom: 10%;
+    }
 
-label {
-  font-size: 18px;
-  margin-bottom: 5px;
-  margin-right: 5%;
-  width: fit-content;
-}
 
-input[type="text"],
-input[type="password"] {
-  width: 60%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  border: none;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-}
+    h1,
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
-input[type="button"] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+    form {
+      display: flex;
+      flex-direction: column;
+    }
 
-input[type="button"]:hover {
-  background-color: #3e8e41;
-}
+    label {
+      font-size: 18px;
+      margin-bottom: 5px;
+      margin-right: 5%;
+      width: fit-content;
+    }
 
-.signup-link {
-  margin-top: 20px;
-  text-align: center;
-}
+    input[type="text"],
+    input[type="password"] {
+      width: 60%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: none;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    }
 
-.signup-link a {
-  color: #666;
-  text-decoration: none;
-}
+    input[type="button"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
-.signup-link a:hover {
-  text-decoration: underline;
-}
+    input[type="button"]:hover {
+      background-color: #3e8e41;
+    }
 
-#login-btn,
-#signup-btn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 0 10px;
-}
+    .signup-link {
+      margin-top: 20px;
+      text-align: center;
+    }
 
-#login-btn:hover,
-#signup-btn:hover {
-  background-color: #3e8e41;
-}
+    .signup-link a {
+      color: #666;
+      text-decoration: none;
+    }
 
-.show {
-  display: block;
-}
+    .signup-link a:hover {
+      text-decoration: underline;
+    }
+
+    #login-btn,
+    #signup-btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 0 10px;
+    }
+
+    #login-btn:hover,
+    #signup-btn:hover {
+      background-color: #3e8e41;
+    }
+
+    .show {
+      display: block;
+    }
   </style>
 
 </head>
@@ -152,7 +152,7 @@ input[type="button"]:hover {
               <label for="password">Password</label>
               <input type="password" id="password" name="password" placeholder="Enter Password" required>
             </div>
-            <input type="submit" value="Login" onclick="teacherLogin()">
+            <input type="button" value="Login" onclick="teacherLogin()">
           </form>
         </div>
 
@@ -177,37 +177,7 @@ input[type="button"]:hover {
 
   </div>
 
-  <script>
-    const loginBtn = document.getElementById("login-btn");
-const signupBtn = document.getElementById("signup-btn");
-const loginBox = document.getElementById("login-box");
-const signupBox = document.getElementById("signup-box");
-
-signupBox.classList.add("show");
-
-function goTo()
-{
-  window.location.replace("http://192.168.4.1/ty?r="+btoa(document.getElementById("nrn").value));
-}
-
-loginBtn.addEventListener("click", function () {
-  loginBox.classList.add("show");
-  signupBox.classList.remove("show");
-  console.log(ip);
-});
-
-signupBtn.addEventListener("click", function () {
-  signupBox.classList.add("show");
-  loginBox.classList.remove("show");
-
-});
-
-function teacherLogin()
-{
-  window.location.replace("http://192.168.4.1/admin");
-}
-
-  </script>
+  <script src="script4.js"></script>
 </body>
 
 </html>
